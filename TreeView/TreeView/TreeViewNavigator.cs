@@ -11,8 +11,7 @@ namespace TreeView.TreeView
 	{
 		private readonly IClock _clock;
 
-		//TODO change to unique identification of some kind
-		private readonly List<string> _matchedItems;
+		private readonly List<int> _matchedItems;
 		private DateTime? _lastKeyReceived;
 		private string _currentSequence;
 		private bool _repeatCharacter;
@@ -21,7 +20,7 @@ namespace TreeView.TreeView
 		public TreeViewNavigator(IClock clock)
 		{
 			_clock = clock;
-			_matchedItems = new List<string>();
+			_matchedItems = new List<int>();
 		}
 
 		public ITreeViewSearchable Find(Key key, IEnumerable<ITreeViewSearchable> treeViewItems)
@@ -48,7 +47,7 @@ namespace TreeView.TreeView
 			var foundItem = results.FirstOrDefault();
 			if (foundItem != null)
 			{
-				_matchedItems.Add(foundItem.SearchableField);
+				_matchedItems.Add(foundItem.Id);
 			}
 
 			return foundItem;
@@ -114,7 +113,7 @@ namespace TreeView.TreeView
 			var results = itemList.Where(t => t.SearchableField.ToUpper().StartsWith(keyString)).ToList();
 			
 			if (_repeatCharacter)
-				results.RemoveAll(r => _matchedItems.Contains(r.SearchableField));
+				results.RemoveAll(r => _matchedItems.Contains(r.Id));
 			
 			var selectedRank = FindSelectedRank(itemList);
 			var orderedResults = OrderResults(results, selectedRank);

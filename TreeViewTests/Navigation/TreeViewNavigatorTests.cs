@@ -28,30 +28,30 @@ namespace TreeViewTests.Navigation
 
 		private static IEnumerable<ITreeViewSearchable> CreateSearchableItems()
 		{
-			yield return new FakeSearchableItem { SearchableField = "iPad 0001", Rank = 1, IsSelected = true };
-			yield return new FakeSearchableItem { SearchableField = "iPad 0002", Rank = 2 };
-			yield return new FakeSearchableItem { SearchableField = "iPad 0003", Rank = 3 };
-			yield return new FakeSearchableItem { SearchableField = "Jack's iPad", Rank = 4 };
-			yield return new FakeSearchableItem { SearchableField = "Jason's iPad", Rank = 5 };
-			yield return new FakeSearchableItem { SearchableField = "Jeff's iPad", Rank = 6 };
-			yield return new FakeSearchableItem { SearchableField = "Jim's iPad", Rank = 7 };
-			yield return new FakeSearchableItem { SearchableField = "JJ's iPad", Rank = 8 };
-			yield return new FakeSearchableItem { SearchableField = "John's iPad", Rank = 9 };
-			yield return new FakeSearchableItem { SearchableField = "Judith's iPad", Rank = 10 };
+			yield return new FakeSearchableItem { Id = 1, SearchableField = "iPad 0001", Rank = 1, IsSelected = true };
+			yield return new FakeSearchableItem { Id = 2, SearchableField = "iPad 0002", Rank = 2 };
+			yield return new FakeSearchableItem { Id = 3, SearchableField = "iPad 0003", Rank = 3 };
+			yield return new FakeSearchableItem { Id = 4, SearchableField = "Jack's iPad", Rank = 4 };
+			yield return new FakeSearchableItem { Id = 5, SearchableField = "Jason's iPad", Rank = 5 };
+			yield return new FakeSearchableItem { Id = 6, SearchableField = "Jeff's iPad", Rank = 6 };
+			yield return new FakeSearchableItem { Id = 7, SearchableField = "Jim's iPad", Rank = 7 };
+			yield return new FakeSearchableItem { Id = 8, SearchableField = "JJ's iPad", Rank = 8 };
+			yield return new FakeSearchableItem { Id = 9, SearchableField = "John's iPad", Rank = 9 };
+			yield return new FakeSearchableItem { Id = 10, SearchableField = "Judith's iPad", Rank = 10 };
 		}
 
 		private static IEnumerable<ITreeViewSearchable> CreateMidwaySelectedSearchableItems()
 		{
-			yield return new FakeSearchableItem { SearchableField = "iPad 0001", Rank = 1 };
-			yield return new FakeSearchableItem { SearchableField = "iPad 0002", Rank = 2 };
-			yield return new FakeSearchableItem { SearchableField = "iPad 0003", Rank = 3 };
-			yield return new FakeSearchableItem { SearchableField = "Jack's iPad", Rank = 4 };
-			yield return new FakeSearchableItem { SearchableField = "Jason's iPad", Rank = 5 };
-			yield return new FakeSearchableItem { SearchableField = "Jeff's iPad", Rank = 6, IsSelected = true };
-			yield return new FakeSearchableItem { SearchableField = "Jim's iPad", Rank = 7 };
-			yield return new FakeSearchableItem { SearchableField = "JJ's iPad", Rank = 8 };
-			yield return new FakeSearchableItem { SearchableField = "John's iPad", Rank = 9 };
-			yield return new FakeSearchableItem { SearchableField = "Judith's iPad", Rank = 10 };
+			yield return new FakeSearchableItem { Id = 1, SearchableField = "iPad 0001", Rank = 1 };
+			yield return new FakeSearchableItem { Id = 2, SearchableField = "iPad 0002", Rank = 2 };
+			yield return new FakeSearchableItem { Id = 3, SearchableField = "iPad 0003", Rank = 3 };
+			yield return new FakeSearchableItem { Id = 4, SearchableField = "Jack's iPad", Rank = 4 };
+			yield return new FakeSearchableItem { Id = 5, SearchableField = "Jason's iPad", Rank = 5 };
+			yield return new FakeSearchableItem { Id = 6, SearchableField = "Jeff's iPad", Rank = 6, IsSelected = true };
+			yield return new FakeSearchableItem { Id = 7, SearchableField = "Jim's iPad", Rank = 7 };
+			yield return new FakeSearchableItem { Id = 8, SearchableField = "JJ's iPad", Rank = 8 };
+			yield return new FakeSearchableItem { Id = 9, SearchableField = "John's iPad", Rank = 9 };
+			yield return new FakeSearchableItem { Id = 10, SearchableField = "Judith's iPad", Rank = 10 };
 		}
 
 		[TestMethod]

@@ -10,10 +10,10 @@ namespace TreeViewTests.Filter
 			var xItem = (ITreeViewFilterable)x;
 			var yItem = (ITreeViewFilterable)y;
 
-			if (xItem.Rank < yItem.Rank)
+			if (xItem.Id < yItem.Id)
 				return 1;
 
-			if (xItem.Rank > yItem.Rank)
+			if (xItem.Id > yItem.Id)
 				return -1;
 
 			return 0;
